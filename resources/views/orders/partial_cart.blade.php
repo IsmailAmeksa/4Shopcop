@@ -9,11 +9,11 @@
                     {{ $rule->size->title }}
                 @endif
             </td>
-			<td class="text-right">&euro;{{ $rule->product->price }}</td>
+			<td class="text-right">&euro;{{ $rule->product->discountedPrice}}</td>
 			@if($remove)
 				<td class="text-right"><a href="{{ route('cart.remove', $key) }}">X</a></td>
 			@endif
-			<?php $total += $rule->product->price; ?>
+			<?php $total += $rule->product->discountedPrice; ?>
 		</tr>
 	@endforeach
 	<tr>

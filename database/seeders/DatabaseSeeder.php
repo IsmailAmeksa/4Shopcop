@@ -18,8 +18,9 @@ class DatabaseSeeder extends Seeder
 
         $user = new User();
         $user->name = "Admin User";
-        $user->email = "winkelbeheer@example.com";
-        $user->password = '$2y$10$MlAE0UDpKEi.WIsyNu43s.jxmQ9PzXEyDcMKfSfNOHwOTZxGEJ16m';
+        $user->admin = true;
+        $user->email = "test@test.nl";
+        $user->password = '12345';
         $user->save();
 
         /////////////////////////////////
